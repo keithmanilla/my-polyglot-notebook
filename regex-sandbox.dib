@@ -1,0 +1,21 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"name":"csharp"},{"aliases":[],"languageName":"javascript","name":"javascript"}]}}
+
+#!markdown
+
+# REGEX SANDBOX
+Procured usable regex snippets.
+
+#!javascript
+
+const inputString = "ASTYEAR2022MONTH10DAY2?#YTSG";
+const myRegex = /year(\d{4})month(\d{1,2})day(\d{1,2})/i;
+const matchArray = inputString.match(myRegex);
+
+if (matchArray !== null) {
+  const [, year, month, day] = matchArray;
+  console.log([year, month, day]);
+} else {
+  console.log("No matches found");
+}
